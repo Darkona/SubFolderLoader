@@ -61,8 +61,7 @@ public class StructuredModLoader extends AbstractJarFileModLocator implements IM
 	public void setup(final FMLCommonSetupEvent event) {
 		// some preinit code
 		LOGGER.info(LogMarkers.LOADING, "Hello world from [SML]!!!");
-		LOGGER.info(LogMarkers.SPLASH,
-				"A HUGE THANK YOU! to stiebi99#2124 again because literally without him this mod would never exist!");
+		LOGGER.info(LogMarkers.SPLASH,"...");
 	}
 	
 	public class KeywordValidator {
@@ -72,9 +71,7 @@ public class StructuredModLoader extends AbstractJarFileModLocator implements IM
 		}
 	}
 	
-	private static final Predicate<Object> KeywordValidator = s -> {
-		return (s instanceof String);
-	};
+	private static final Predicate<Object> KeywordValidator = s -> (s instanceof String);
 	
 	public void configProvider() {
 		LOGGER.info("Loading Config now! ({})", CONFIGFILE.toString());
